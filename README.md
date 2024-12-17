@@ -40,12 +40,12 @@ source venv/bin/activate  # For Linux/MacOS
 venv\Scripts\activate     # For Windows
 
 Install Dependencies:
-Flask==2.3.3
-Flask-WTF==1.1.1
-Flask-SQLAlchemy==3.0.5
-Flask-Migrate==4.0.5
-Jinja2==3.1.2
-WTForms==3.1.0
+Flask==2.3.3 ,
+Flask-WTF==1.1.1 ,
+Flask-SQLAlchemy==3.0.5 ,
+Flask-Migrate==4.0.5 ,
+Jinja2==3.1.2 ,
+WTForms==3.1.0 ,
 by:
 pip install -r {Dependencies}
 
