@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .form-container {
+        max-width: 600px; /* Set max-width to control form size */
+        margin: 0 auto; /* Center the form */
+    }
+    /* Center the form on the page */
+    form {
+        max-width: 400px;
+        margin: 0px auto;
+        padding: 90px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style the heading */
+    h2 {
+        text-align: center;
+        color: #333;
+        padding: 50px;
+        color : #555;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Input fields and labels */
+    .form-group label {
+        font-weight: bold;
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 8px;
+    }
+
+    .form-group input {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    /* Button styles */
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    /* Add responsive design */
+    @media (max-width: 768px) {
+        form {
+            padding: 15px;
+        }
+
+        .btn-primary {
+            font-size: 14px;
+        }
+    }
+</style>
+<h2> Doctor Log in </h2>
+<form method="POST" action="{{ url_for('doctor_signin') }}">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+        {{form.unique_id.label(class="form-control-label")}}
+        {{form.unique_id(class="form-control")}}
+      </div>
+      <div class="form-group">
+        {{form.password.label(class="form-control-label")}}
+        {{form.password(class="form-control")}}
+      </div>
+    <div class = "form-group">
+        {{form.Login(class = "btn btn-primary")}}
+    </div>   
+    {% if form.password.errors %}
+<div class="error-message" style="color: red;">
+    {% for error in form.password.errors %}
+        <p>{{ error }}</p>
+    {% endfor %}
+</div>
+{% endif %}
+</form>
+{% endblock %}

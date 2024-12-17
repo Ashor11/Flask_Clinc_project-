@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="home-container">
+   
+    <div class="about-clinic">
+        <h1>Welcome to Our Clinic</h1>
+        <p>We are delighted to welcome you to our Clinic Management System.</p>
+        <p> Our goal is to provide you with a seamless and efficient platform to manage patient records, appointments, and other essential tasks.</p>
+        <p>Below are some important instructions to help you navigate and use the system effectively.</p>
+        
+    </div>
+
+   
+    <div class="image-gallery">
+        <h2>Our Clinic in Pictures</h2>
+        <div class="gallery">
+         
+            <img src="static/images/c1 (1).jpg" alt="Clinic Image 1" class="gallery-item">
+            <img src="static/images/c1 (2).jpg" alt="Clinic Image 2" class="gallery-item">
+            <img src="static/images/c1 (3).jpg" alt="Clinic Image 3" class="gallery-item">
+        </div>
+    </div>
+
+   
+<style>
+    .home-container {
+        padding: 80px;
+        text-align: center;
+    }
+
+    .about-clinic {
+        margin-bottom: 40px;
+    }
+
+    .about-clinic h1 {
+        font-size: 36px;
+        color: #4CAF50;
+    }
+
+    .about-clinic p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .image-gallery {
+        margin-bottom: 40px;
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .gallery-item {
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+</style>
+{% endblock %}

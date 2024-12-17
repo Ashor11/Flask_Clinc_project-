@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+   
+    .center-container {
+        display: flex;
+        flex-direction: column;       
+        justify-content: center;     
+        align-items: center;         
+        height: 75vh;                 
+        text-align: center;         
+    }
+    
+   
+    .button-container {
+        margin: 10px 0;               
+    }
+    
+   
+    .button-container a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .back-button-container {
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+    }
+
+    .back-button {
+        padding: 20px 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+  
+</style>
+<div class="center-container">
+    <div class="button-container">
+        <a href="{{ url_for('patient_fetch_cl') }}" style="padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 50px;"> Search for patient data </a>
+    </div>
+
+    <div class="button-container">
+        <a href="{{ url_for('patient_signup') }}" style="padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 50px;"> Add new patient </a>
+    </div>
+    <a class="space" > </a>
+    <a href="{{ url_for('doctor_signin') }}" class="back-button">Sign out</a>
+</div>
+{% endblock %}
