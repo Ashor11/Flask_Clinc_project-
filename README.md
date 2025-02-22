@@ -39,15 +39,20 @@ python -m venv venv
 source venv/bin/activate  # For Linux/MacOS
 venv\Scripts\activate     # For Windows
 
-Install Dependencies:
+Install Dependencies manually or automatic through requirements.txt :
 Flask==2.3.3 ,
 Flask-WTF==1.1.1 ,
 Flask-SQLAlchemy==3.0.5 ,
 Flask-Migrate==4.0.5 ,
 Jinja2==3.1.2 ,
 WTForms==3.1.0 ,
+
 by:
 pip install -r {Dependencies}
+
+or 
+
+pip install -r requirements.txt
 
 
 
